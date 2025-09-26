@@ -1,11 +1,14 @@
 package org.perujug;
 
+import org.perujug.runners.BenchmarkRunner;
+
 public class Main {
     static void main() {
-        IO.println(String.format("Hello and welcome!"));
+        IO.println("Welcome to the JDK 25 Vector API Benchmark Demo!");
+        IO.println("This demo showcases the power of SIMD operations using Java's Vector API.");
+        IO.println();
 
-        for (int i = 1; i <= 5; i++) {
-            IO.println("i = " + i);
-        }
+        BenchmarkRunner runner = new BenchmarkRunner();
+        runner.runAllBenchmarks();
     }
 }
